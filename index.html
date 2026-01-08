@@ -191,17 +191,26 @@
           </p>
         </div>
 
-        <form class="contact-form">
+        <form name="contact" netlify class="contact-form">
           <div class="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input type="text" name="name" placeholder="Your Name" required />
           </div>
 
           <div class="form-group">
-            <input type="email" placeholder="Your Email" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
           </div>
 
           <div class="form-group">
-            <textarea placeholder="Your Message" required></textarea>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
           </div>
 
           <button type="submit">Send Message</button>
