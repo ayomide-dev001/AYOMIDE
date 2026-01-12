@@ -439,7 +439,7 @@ img {
 
 @media (max-width: 900px) {
   .hero {
-    padding-top: 80px;
+    padding-top: 200px;
   }
 
   .hero h1 {
@@ -455,6 +455,11 @@ img {
 
   .menu-icon {
     display: flex;
+  }
+
+  .socials a {
+    display: none;
+    border: none;
   }
 
   .nav {
