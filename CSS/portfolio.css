@@ -53,10 +53,16 @@ img {
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--primary-color);
   text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+}
+
+.logo:hover {
+  transform: translateX(20px);
 }
 
 #menu-toggle {
@@ -86,10 +92,9 @@ img {
   text-decoration: none;
   color: #fff;
   font-size: 17px;
-  transition: color 0.3s;
   padding: 8px 16px;
   border-radius: 30px;
-  transition: background 0.3s ease;
+  transition: all 0.8s ease-in-out;
 }
 
 .nav a:hover {
@@ -144,11 +149,12 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--primary-color);
-  transition: 0.3s;
+  transition: all 0.8s ease-in-out;
 }
 
 .socials a:hover {
   background: var(--primary-color);
+  transform: translateY(-5px);
   color: #081420;
 }
 
@@ -201,13 +207,15 @@ img {
   background: var(--primary-color);
   color: #000;
   font-weight: 600;
+  width: 150px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease-in-out;
 }
 
 .about-tab button:hover {
   background: #fff;
   transform: translateY(-3px);
+  width: 200px;
 }
 
 .service {
@@ -239,7 +247,7 @@ img {
   padding: 2rem;
   border-radius: 14px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease-in-out;
   backdrop-filter: blur(8px);
 }
 
@@ -403,11 +411,12 @@ img {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.8s ease-in-out;
 }
 
 .contact-form button:hover {
-  background: var(--primary-color);
+  background: #fff;
+  transform: translateY(-6px);
 }
 
 /* RESPONSIVE */
