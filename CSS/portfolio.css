@@ -412,6 +412,12 @@ img {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .header {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: inherit;
+  }
+
   .about-tab {
     grid-template-columns: 1fr;
     text-align: center;
