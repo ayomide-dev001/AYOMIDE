@@ -16,6 +16,7 @@ body {
 
 :root {
   --primary-color: goldenrod;
+  --animate-speed: 3s;
 }
 
 a {
@@ -116,22 +117,28 @@ img {
   text-align: center;
 }
 
+/* added animation */
 .hero h1 {
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 20px;
+  transform: translateY(-1200px);
+  animation: headingMove var(--animate-speed) forwards ease-in;
 }
 
 .hero h1 span {
   color: var(--primary-color);
 }
 
+/* added animation */
 .hero p {
   font-size: 17px;
   line-height: 1.7;
   color: #cbd5e1;
   max-width: 700px;
   margin: 0 auto 30px;
+  transform: translateX(-8200px);
+  animation: textMove var(--animate-speed) forwards ease-in;
 }
 
 .socials {
@@ -417,6 +424,19 @@ img {
 .contact-form button:hover {
   background: #fff;
   transform: translateY(-6px);
+}
+
+/* animation */
+@keyframes headingMove {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes textMove {
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* RESPONSIVE */
