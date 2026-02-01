@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans" sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   color: #fff;
 }
@@ -30,16 +30,20 @@ ul {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
+/* HERO BACKGROUND */
 .hero-bg {
   min-height: 100vh;
-  background: linear-gradient(rgba(8, 20, 32, 0.85), rgba(8, 20, 32, 0.85)),
+  background:
+    linear-gradient(rgba(8, 20, 32, 0.85), rgba(8, 20, 32, 0.85)),
     url("/IMAGE/christopher-gower-m_HRfLhgABo-unsplash.jpg") center/cover
       no-repeat;
   color: #fff;
 }
 
+/* HEADER */
 .header {
   max-width: 1200px;
   margin: auto;
@@ -83,23 +87,27 @@ img {
   background: #fff;
 }
 
+/* NAV */
 .nav {
   display: flex;
-  list-style: none;
   gap: 25px;
 }
 
 .nav a {
-  text-decoration: none;
   color: #fff;
   font-size: 17px;
   padding: 8px 16px;
   border-radius: 30px;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav a:hover {
   color: var(--primary-color);
+}
+
+.nav a.active {
+  color: var(--primary-color);
+  border: 1px solid rgba(218, 165, 32, 0.7);
 }
 
 .header-right {
@@ -110,6 +118,7 @@ img {
   color: #ddd;
 }
 
+/* HERO TEXT */
 .hero {
   max-width: 900px;
   margin: auto;
@@ -117,7 +126,6 @@ img {
   text-align: center;
 }
 
-/* added animation */
 .hero h1 {
   font-size: 50px;
   font-weight: 700;
@@ -130,7 +138,6 @@ img {
   color: var(--primary-color);
 }
 
-/* added animation */
 .hero p {
   font-size: 17px;
   line-height: 1.7;
@@ -141,6 +148,7 @@ img {
   animation: textMove var(--animate-speed) forwards ease-in;
 }
 
+/* SOCIALS */
 .socials {
   display: flex;
   justify-content: center;
@@ -156,7 +164,7 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--primary-color);
-  transition: all 0.8s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .socials a:hover {
@@ -165,6 +173,7 @@ img {
   color: #081420;
 }
 
+/* ABOUT */
 .about {
   padding: 5rem 2rem;
   background: linear-gradient(
@@ -172,7 +181,6 @@ img {
     rgba(5, 8, 20, 0.98),
     rgba(8, 12, 30, 0.98)
   );
-  color: #fff;
 }
 
 .about h3 {
@@ -206,25 +214,18 @@ img {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.about-tab button {
+/* CV BUTTON (NO HOVER EFFECT) */
+.cv-btn {
   margin-top: 2rem;
+  display: inline-block;
   padding: 0.8rem 2rem;
   border-radius: 30px;
-  border: none;
   background: var(--primary-color);
   color: #000;
   font-weight: 600;
-  width: 150px;
-  cursor: pointer;
-  transition: all 0.8s ease-in-out;
 }
 
-.about-tab button:hover {
-  background: #fff;
-  transform: translateY(-3px);
-  width: 200px;
-}
-
+/* SERVICES */
 .service {
   padding: 4rem 2rem;
   background: linear-gradient(
@@ -254,7 +255,7 @@ img {
   padding: 2rem;
   border-radius: 14px;
   text-align: center;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.5s ease-in-out;
   backdrop-filter: blur(8px);
 }
 
@@ -276,8 +277,92 @@ img {
   color: rgba(255, 255, 255, 0.75);
 }
 
+/* MY WORK */
+.mywork {
+  padding: 5rem 2rem;
+  background: linear-gradient(
+    to right,
+    rgba(5, 8, 20, 0.98),
+    rgba(8, 12, 30, 0.98)
+  );
+}
+
+.mywork h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+
+.work-intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+}
+
+.work-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.work-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+.work-item:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.work-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.work-item h4 {
+  padding: 18px 18px 5px;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.work-item p {
+  padding: 0 18px 18px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.work-links {
+  padding: 0 18px 18px;
+}
+
+/* WORK BUTTON (NO HOVER EFFECT) */
+.work-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: var(--primary-color);
+  color: #000;
+  font-weight: 600;
+}
+
+/* SKILLS */
 .skills-section {
-  background: linear-gradient(rgba(5, 15, 30, 0.95), rgba(5, 15, 30, 0.95)),
+  background:
+    linear-gradient(rgba(5, 15, 30, 0.95), rgba(5, 15, 30, 0.95)),
     url("/IMAGE/carl-heyerdahl-KE0nC8-58MQ-unsplash.jpg") center/cover no-repeat;
   color: #fff;
   padding: 100px 20px;
@@ -335,10 +420,10 @@ img {
   border-radius: 10px;
 }
 
+/* CONTACT */
 .contact-section {
   background: #050f1e;
   padding: 100px 20px;
-  color: #fff;
 }
 
 .contact-container {
@@ -348,15 +433,6 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-}
-
-/* LEFT TEXT */
-.contact-info .section-tag {
-  font-size: 13px;
-  letter-spacing: 2px;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-  display: inline-block;
 }
 
 .contact-info h2 {
@@ -370,7 +446,6 @@ img {
   font-size: 15px;
 }
 
-/* FORM */
 .contact-form {
   background: #081420;
   padding: 40px;
@@ -408,7 +483,7 @@ img {
   border-color: var(--primary-color);
 }
 
-/* BUTTON */
+/* CONTACT BUTTON (NO HOVER EFFECT) */
 .contact-form button {
   width: 100%;
   padding: 14px;
@@ -418,15 +493,16 @@ img {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.8s ease-in-out;
 }
 
-.contact-form button:hover {
-  background: #fff;
-  transform: translateY(-6px);
+.form-message {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #cbd5e1;
+  text-align: center;
 }
 
-/* animation */
+/* ANIMATIONS */
 @keyframes headingMove {
   to {
     transform: translateY(0);
@@ -484,6 +560,7 @@ img {
   .hero p {
     font-size: 16px;
   }
+
   .header {
     flex-wrap: wrap;
   }
@@ -521,10 +598,6 @@ img {
 
   .skills-container {
     grid-template-columns: 1fr;
-  }
-
-  .skills-text h2 {
-    font-size: 26px;
   }
 
   .contact-container {

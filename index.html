@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- link-font -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
 
-    <!-- link-font-awesome -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -21,15 +21,19 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- link CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="CSS/portfolio.css" />
+
     <title>Ayomide Oguntunde</title>
   </head>
+
   <body>
-    <section class="container hero-bg">
+    <!-- HERO SECTION -->
+    <section class="container hero-bg" id="home">
       <header class="header">
         <h2 class="logo">Ayomide</h2>
 
+        <!-- Mobile Menu Toggle -->
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon">
           <span></span>
@@ -37,12 +41,14 @@
           <span></span>
         </label>
 
-        <ul class="nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">My Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <!-- NAV -->
+        <ul class="nav" id="navLinks">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">My Skills</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#work" class="nav-link">My Work</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="header-right">
@@ -52,6 +58,7 @@
 
       <main class="hero">
         <h1>Hi, I am <span>Ayomide Oguntunde</span></h1>
+
         <p>
           I am a frontend web developer, Dynamics 365 Business Central
           functional consultant, and software tester focused on building clean
@@ -59,16 +66,26 @@
         </p>
 
         <div class="socials">
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Twitter"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="#" aria-label="TikTok"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
         </div>
       </main>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section class="about" id="about">
       <h3>About Me</h3>
+
       <div class="about-tab">
         <img
           src="IMAGE/89e9abd8-774d-4048-bb04-144c7960b16e.jpeg"
@@ -76,29 +93,34 @@
           class="image"
         />
 
-        <p>
-          I am a frontend web developer, Dynamics 365 Business Central
-          functional consultant, and software tester focused on building clean,
-          functional, and user friendly digital solutions. I combine frontend
-          development skills with a strong understanding of business processes
-          to deliver systems that are both visually appealing and reliable. I
-          build responsive web interfaces using modern web technologies, paying
-          close attention to structure, usability, and performance. As a
-          functional consultant, I work with real life business scenarios in
-          Dynamics 365 Business Central, helping organizations configure and use
-          systems that support efficient operations. I also apply software
-          testing practices to ensure applications meet requirements, function
-          correctly, and maintain a high level of quality. I am continuously
-          learning and improving my skills while working on practical projects
-          that strengthen my technical and consulting experience.
-          <br />
-          <button>Download CV</button>
-        </p>
+        <div class="about-text">
+          <p>
+            I am a frontend web developer, Dynamics 365 Business Central
+            functional consultant, and software tester focused on building
+            clean, functional, and user friendly digital solutions. I combine
+            frontend development skills with a strong understanding of business
+            processes to deliver systems that are both visually appealing and
+            reliable. I build responsive web interfaces using modern web
+            technologies, paying close attention to structure, usability, and
+            performance. As a functional consultant, I work with real life
+            business scenarios in Dynamics 365 Business Central, helping
+            organizations configure and use systems that support efficient
+            operations. I also apply software testing practices to ensure
+            applications meet requirements, function correctly, and maintain a
+            high level of quality. I am continuously learning and improving my
+            skills while working on practical projects that strengthen my
+            technical and consulting experience.
+          </p>
+
+          <a class="cv-btn" href="#" download>Download CV</a>
+        </div>
       </div>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section class="service" id="services">
       <h3>Services</h3>
+
       <div class="service-menu">
         <div class="service-item">
           <h4>Clean & Responsive Interfaces</h4>
@@ -131,9 +153,71 @@
       </div>
     </section>
 
+    <!-- MY WORK SECTION -->
+    <section class="mywork" id="work">
+      <h3>My Work</h3>
+
+      <p class="work-intro">
+        I’m a Frontend Developer skilled in building responsive websites using
+        HTML, CSS, JavaScript, and modern tools. I focus on creating clean
+        layouts and user-friendly interfaces. Below are some of the projects
+        I’ve completed.
+      </p>
+
+      <div class="work-grid">
+        <!-- Project 1 -->
+        <div class="work-item">
+          <img
+            src="IMAGE/screencapture-d-s-kitchen-vercel-app-2026-02-01-14_50_49.png"
+            alt="D's Kitchen Website"
+          />
+          <h4>D’s Kitchen Website</h4>
+          <p>
+            A responsive restaurant website with clean UI, menu section, and
+            modern layout.
+          </p>
+
+          <div class="work-links">
+            <a
+              class="work-btn"
+              href="https://d-s-kitchen.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Live
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="work-item">
+          <img
+            src="IMAGE/screencapture-zentrix-ten-vercel-app-2026-01-24-13_31_33.png"
+            alt="Zentrix Website"
+          />
+          <h4>Zentrix Website</h4>
+          <p>
+            A modern business landing page optimized for conversions and clean
+            presentation.
+          </p>
+
+          <div class="work-links">
+            <a
+              class="work-btn"
+              href="https://zentrix-ten.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Live
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
     <section class="skills-section" id="skills">
       <div class="skills-container">
-        <!-- LEFT -->
         <div class="skills-text">
           <span class="section-tag">MY SKILLS</span>
           <h2>Skills & Expertise</h2>
@@ -144,11 +228,10 @@
           </p>
         </div>
 
-        <!-- RIGHT -->
         <div class="skills-bars">
           <div class="skill">
             <div class="skill-info">
-              <span>HTML, CSS/JAVASCRIPT</span>
+              <span>HTML, CSS, JAVASCRIPT</span>
               <span>90%</span>
             </div>
             <div class="progress">
@@ -159,7 +242,7 @@
           <div class="skill">
             <div class="skill-info">
               <span>BUSINESS CENTRAL</span>
-              <span>85%</span>
+              <span>75%</span>
             </div>
             <div class="progress">
               <div class="progress-bar" style="width: 75%"></div>
@@ -179,9 +262,9 @@
       </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="contact-section" id="contact">
       <div class="contact-container">
-        <!-- LEFT TEXT -->
         <div class="contact-info">
           <span class="section-tag">CONTACT</span>
           <h2>Let’s Work Together</h2>
@@ -191,15 +274,22 @@
           </p>
         </div>
 
-        <form name="contact" netlify class="contact-form">
+        <form name="contact" netlify class="contact-form" id="contactForm">
           <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
           </div>
 
           <div class="form-group">
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="Your Email"
               required
             />
@@ -208,14 +298,20 @@
           <div class="form-group">
             <textarea
               name="message"
+              id="message"
               placeholder="Your Message"
               required
             ></textarea>
           </div>
 
           <button type="submit">Send Message</button>
+
+          <p class="form-message" id="formMessage"></p>
         </form>
       </div>
     </section>
+
+    <!-- JAVASCRIPT -->
+    <script src="javascript/portfolio.js"></script>
   </body>
 </html>
